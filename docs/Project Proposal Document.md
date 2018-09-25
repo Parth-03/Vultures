@@ -7,7 +7,7 @@
 * Conor Meade, ConorMeade
 * Abhaydeep Singh, Github Username 2
 * Parth Goel, Github Username 3
-* Garrison Qian, Garrison Qian
+* Garrison Qian, GarrisonQian
 * Thomas Bui, Github Username 5
 
 # Innovative Idea
