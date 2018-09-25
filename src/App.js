@@ -6,6 +6,8 @@ import './style/custom.css';
 
 import Food from './browser/containers/Food';
 import PostFood from './browser/containers/PostFood';
+import FoodMap from './browser/containers/FoodMap';
+import UserPage from './browser/containers/UserPage';
 
 class App extends React.Component {
   render() {
@@ -29,6 +31,16 @@ class App extends React.Component {
                   <li className="nav-item">
                     <Link to="/postfood" className="nav-link">
                       Post Food
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/foodmap" className="nav-link">
+                      Food Map
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/UserPage" className="nav-link">
+                      User Page
                     </Link>
                   </li>
                 </div>
@@ -57,6 +69,18 @@ class App extends React.Component {
                 path="/postfood"
                 component={PostFood}
                 key="postfood"
+              />
+              <Route
+                exact={true}
+                path="/foodmap"
+                component={FoodMap}
+                key="foodmap"
+              />
+              <Route
+                exact={true}
+                path="/userpage"
+                component={UserPage}
+                key="userpage"
               />
             </Switch>
           </div>
