@@ -3,6 +3,7 @@ import { Link, Route, Router, Switch } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import history from './history';
 import './style/custom.css';
+import Home from './browser/containers/Home';
 
 import Food from './browser/containers/Food';
 import PostFood from './browser/containers/PostFood';
@@ -57,6 +58,7 @@ class App extends React.Component {
             </div>
           </nav>
           <div id="router-div">
+          <Route exact path="/" component={Home} />
             <Switch>
               <Route
                 exact={true}

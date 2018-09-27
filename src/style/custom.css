@@ -137,3 +137,10 @@
 .wrap {
 	text-align: center;
 }
+.Map{
+  width: '20%';
+  height: '25%'
+}
+.callmepadder{
+  padding: 2%
+}
