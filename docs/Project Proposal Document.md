@@ -5,10 +5,10 @@
 # Team Overview
 
 * Conor Meade, ConorMeade
-* Abhaydeep Singh, Github Username 2
-* Parth Goel, Github Username 3
+* Abhaydeep Singh, Github Ab-hay
+* Parth Goel, Github Parth-03
 * Garrison Qian, GarrisonQian
-* Thomas Bui, Github Username 5
+* Thomas Bui, Github thomasbui1997
 
 # Innovative Idea
 
