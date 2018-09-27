@@ -13,7 +13,7 @@
   .App .Image {
     width: 50vw;
     position: relative;
-    background-size: cover;
+    background-size: cover; 
     background-position: center; }
     @media screen and (max-width: 980px) {
       .App .Image {

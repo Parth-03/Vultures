@@ -17,7 +17,7 @@ export default class UserPage extends React.Component{
       quote: {
         content: 'Favorite Food are Tacos',
         score: '+54'
-      }
+      } 
       
     };
   }
