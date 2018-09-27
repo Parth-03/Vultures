@@ -61,3 +61,30 @@
             right: 420px;
             bottom: 191px;
         }
+.background{
+  background-color: maroon;
+}
+
+.MapButtons{
+  padding-left: 37%;
+  height:auto;
+  display:inline-block;
+}
+
+.diningLink{
+  color: white;
+}
+
+.MapHeader{
+  color:white;
+}
+
+.MapDesc{
+  color: white;
+}
+
+.Looking{
+  padding-left:35%;
+   color:white;
+}
+        
