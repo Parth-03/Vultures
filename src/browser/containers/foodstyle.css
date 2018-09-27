@@ -1,0 +1,23 @@
+.foodElement {
+	width: 800px;
+	border: 5px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+.left {
+	float:left;
+}
+.right{
+	float:right;
+}
+
+.center{
+	text-align:left;
+	margin:0 auto;
+	display:inline-block;
+	width:400px;
+}
+
+.wrap{
+	text-align:center;
+}
