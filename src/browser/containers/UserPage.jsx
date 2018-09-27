@@ -56,9 +56,4 @@ function Profile(props){
     );
 }
 
-function Button(){
-  return (
-    <button className="Btn-update">Update</button>
-  );
-}
   

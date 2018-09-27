@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './foodstyle.css'
 
 export default class Food extends React.Component{
   render(){
