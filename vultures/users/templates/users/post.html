@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="wrap">
+  <h1>Post Location</h1><br></br>
+    <p>Use the form below to submit information about an event.</p>
+      <div class="space">
+        <form>
+          <div>
+            Location: <br></br>
+            <input type="text" name="location"></input>
+            <br></br>
+            Time: <br></br>
+            <input type="text" name="time"></input>
+            <br></br>
+            Description: <br></br>
+            <input type="text" name="description"></input>
+            </div>
+          <br></br>
+          <button>Submit</button>
+        </form>
+      </div>
+</div>
+{% endblock %}
