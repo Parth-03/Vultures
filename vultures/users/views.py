@@ -64,3 +64,9 @@ class MembersView(LoginRequiredMixin, TemplateView, View):
 
     def get(self, request, *args, **kwargs):
         return self.render_to_response({})
+
+class PostView(TemplateView):
+    template_name = 'users/post.html'
+
+class FeedView(TemplateView):
+    template_name = 'users/feed.html'

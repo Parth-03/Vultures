@@ -25,4 +25,16 @@ urlpatterns = [
         view=views.MembersView.as_view(),
         name='members'
     ),
+
+     url(
+       regex=r'^post/$',
+       view=views.PostView.as_view(),
+       name='post'
+    ),
+
+    url(
+       regex=r'^feed/$',
+       view=views.FeedView.as_view(),
+       name='feed'
+    ),
 ]
