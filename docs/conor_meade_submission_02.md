@@ -1,0 +1,5 @@
+ My main contribution in this project was creating the data model diagram which gave our team an outline of how to implement our data model in models.py as well as understand what we needed in terms of models for our app. These same models were used as a guideline for creating parts of the views and URL mappings of our web app.
+
+I also worked on a majority of the team submission Markdown file. This gave an overview of our current design for the app and what we hope to achieve with the UMass Vultures project.  The main portion of the submission is the Design Overview which involved describing all the parts of our web app as it relates to the Data Model, URL routes, and UI views. Since I did not do work on all of these aspects I had to communicate with my teammates to ensure the write-up properly described the design goals of the project. I also outlined where we succeeded as a team as well as where we ran into issues.
+
+Lastly, I also worked on organizing meeting times through our team Slack channel. This involved balancing schedules so that we could all find a good time to meet.
