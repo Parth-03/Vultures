@@ -1,7 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div>
-        Hey you in here
-    </div>
+<h1>User List<h1>
+{% if object_list %}
+<ul>
+  {% for person in object_list %}
+  <li>
+    <a href="{{ person.get_absolute_url }}">{{ person.username }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>There are no users.</p>
+{% endif %}       
 {% endblock %}

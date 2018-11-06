@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.core.urlresolvers import reverse
 
 
 class Person(AbstractUser):
@@ -7,6 +8,10 @@ class Person(AbstractUser):
 
     def __str__(self):
         return "User(<{}>)".format(self.username)
+
+    def get_absolute_url(self):
+        """Returns the url to access a particular author instance."""
+        return reverse("user-detail", args=[str(self.id)])
 
 
 class FoodComment(models.Model):

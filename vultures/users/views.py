@@ -2,9 +2,13 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
-from django.views.generic import TemplateView, View
+
+from django.views.generic import TemplateView, View, ListView, DetailView
 
 from .forms import CustomUserCreationForm
+
+from users.models import Person, FoodPost, FoodComment
+
 
 
 class LoginView(TemplateView, View):
@@ -60,13 +64,22 @@ class RegisterView(TemplateView):
 
 
 class MembersView(LoginRequiredMixin, TemplateView, View):
+    model = Person
     template_name = 'users/members_only.html'
-
+    context_object_name = 'users_list'
+    queryset = Person.objects.all()
     def get(self, request, *args, **kwargs):
         return self.render_to_response({})
+
 
 class PostView(TemplateView):
     template_name = 'users/post.html'
 
-class FeedView(TemplateView):
+class FeedView(ListView):
     template_name = 'users/feed.html'
+    model = FoodPost
+
+class FeedDetailView(DetailView):
+    template_name = 'users/post_details.html'
+    model = FoodPost
+

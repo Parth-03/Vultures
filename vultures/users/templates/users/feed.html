@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<center>
+<!-- <center>
   <h1>What's New</h1><br/>
     <div class="foodElement">
       <div class="wrap">
@@ -59,5 +59,17 @@
         </div>
         </div>
     </div>   
-</center>
+</center> -->
+<h1>Post List<h1>
+{% if object_list %}
+<ul>
+  {% for FoodPost in object_list %}
+  <li>
+    <a href="{{ FoodPost.get_absolute_url }}">{{ FoodPost.postInfo }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>There are no posts.</p>
+{% endif %}       
 {% endblock %}
