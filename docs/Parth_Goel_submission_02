@@ -1,0 +1,5 @@
+I contributed to several aspects of the project. Firstly, I created the init.sh file and added the python commands in it to be run. I then created the init.py file and added the admin superuser credentials to access the website with. I also populated it with mock data using Faker which creates samples of Persons, Posts and Comments which get added to the database. 
+
+I also helped devise the data model diagram. I developed an outline for how the different elements in our web application would link to one another and their respective mappings. 
+
+Lastly, I also contributed towards admin.py and fixed models.py by recognizing some errors in the data fields we were trying to implement. I also helped organize team meets and as well creating the video submission.
