@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Comment List<h1>
+{% if object_list %}
+<ul>
+  {% for FoodComment in object_list %}
+  <li>
+    <a href="{{ FoodComment.get_absolute_url }}">{{ FoodComment.commentContent }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>There are no posts.</p>
+{% endif %}       
+{% endblock %}

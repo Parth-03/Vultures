@@ -63,13 +63,12 @@ class RegisterView(TemplateView):
             return self.render_to_response({'form': form})
 
 
-class MembersView(LoginRequiredMixin, TemplateView, View):
+class MembersView(ListView):
     model = Person
     template_name = 'users/members_only.html'
-    context_object_name = 'users_list'
-    queryset = Person.objects.all()
-    def get(self, request, *args, **kwargs):
-        return self.render_to_response({})
+    #queryset = Person.objects.all()
+    #def get(self, request, *args, **kwargs):
+     #   return self.render_to_response({})
 
 
 class PostView(TemplateView):
@@ -83,3 +82,10 @@ class FeedDetailView(DetailView):
     template_name = 'users/post_details.html'
     model = FoodPost
 
+class CommentListView(ListView):
+    template_name = 'users/comment_list.html'
+    model = FoodComment
+
+class CommentDetailView(DetailView):
+    template_name = 'users/comment_details.html'
+    model = FoodComment

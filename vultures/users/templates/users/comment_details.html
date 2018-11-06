@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Poster: {{ foodcomment.commenter }}</h1>
+
+  <p><strong>Post:</strong><a href="{{ foodcomment.commentPost }}"></a>{{foodcomment.commentPost}}</p> <!-- author detail link not yet defined -->
+  <p><strong>Comment:</strong> {{ foodcomment.commentContent }}</p>
+  <p><strong>Time</strong> {{ foodcomment.commentDateTime }}</p> 
+  <p><strong>Score:</strong> {{ foodcomment.commentScore }}</p>  
+
+{% endblock %}

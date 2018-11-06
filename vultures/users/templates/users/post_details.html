@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Poster: {{ FoodPost.user }}</h1>
+  <h1>Poster: {{ foodpost.user }}</h1>
 
-  <p><strong>Time:</strong>{{ FoodPost.postDate }}</a></p> <!-- author detail link not yet defined -->
-  <p><strong>Location:</strong> {{ FoodPost.location }}</p>
-  <p><strong>Info</strong> {{ FoodPost.postInfo }}</p> 
-  <p><strong>Score:</strong> {{ FoodPost.postScore }}</p>  
+  <p><strong>Time:</strong>{{ foodpost.postDate }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Location:</strong> {{ foodpost.location }}</p>
+  <p><strong>Info</strong> {{ foodpost.postInfo }}</p> 
+  <p><strong>Score:</strong> {{ foodpost.postScore }}</p>  
 
 {% endblock %}

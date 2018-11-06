@@ -36,4 +36,18 @@ urlpatterns = [
        view=views.FeedView.as_view(),
        name='feed'
     ),
+    url(regex=r'^feed/(?P<pk>\d+)/$',
+        view=views.FeedDetailView.as_view(),
+        name='post-detail'
+    ),
+
+    url(regex=r'^comments/$',
+        view=views.CommentListView.as_view(),
+        name='comments'
+    ),
+
+     url(regex=r'^comments/(?P<pk>\d+)/$',
+        view=views.CommentDetailView.as_view(),
+        name='comment-detail'
+    ),
 ]

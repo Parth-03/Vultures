@@ -7,7 +7,7 @@ class Person(AbstractUser):
     description = models.TextField(blank=True)
 
     def __str__(self):
-        return "User(<{}>)".format(self.username)
+        return self.username
 
     def get_absolute_url(self):
         """Returns the url to access a particular author instance."""
@@ -37,6 +37,9 @@ class FoodComment(models.Model):
 	def display_author(self):
 		return self.commenter
 
+	def get_absolute_url(self):
+		return reverse("comment-detail", args=[str(self.id)])
+
 
 class FoodPost(models.Model):
 
@@ -60,4 +63,8 @@ class FoodPost(models.Model):
 
 	def __str__(self):
 		return self.postInfo
+
+	def get_absolute_url(self):
+		return reverse("post-detail", args=[str(self.id)])
+
 
