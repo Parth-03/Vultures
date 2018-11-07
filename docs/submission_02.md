@@ -17,6 +17,7 @@ As for changes from project 1, we have made the change from using React.js to Dj
 
 # Video Link
 (Video Link)
+http://youtu.be/OTJtogVYY8g?hd=1
 
 
 # Design Overview

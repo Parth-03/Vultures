@@ -24,7 +24,9 @@ def create_food_posts(person):
         post.save()
         posts.append(post)
         create_food_comments(post, person)
+        
 # Create Food Comments
+
 def create_food_comments(post, person):    
     for i in range(1, 10):
         a_content= fake.sentence()
@@ -35,6 +37,7 @@ def create_food_comments(post, person):
         comments.append(comment)
 
 # Create Persons
+
 for i in range(1, 10):
     a_name = fake.name()
     a_password = fake.name()
