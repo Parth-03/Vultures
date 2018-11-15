@@ -2,9 +2,9 @@
 
 {% block content %}
 <h1>User List<h1>
-{% if object_list %}
+{% if person_list %}
 <ul>
-  {% for person in object_list %}
+  {% for person in person_list %}
   <li>
     <a href="">{{ person.username }}</a>
   </li>

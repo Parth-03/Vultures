@@ -1,7 +1,8 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect
+from django.contrib.auth.decorators import user_passes_test
+from django.shortcuts import redirect, render
 
 from django.views.generic import TemplateView, View, ListView, DetailView
 
@@ -66,6 +67,15 @@ class RegisterView(TemplateView):
 class MembersView(ListView):
     model = Person
     template_name = 'users/members_only.html'
+    def get(self, request, *args, **kwargs):
+        if not request.user.is_authenticated():
+            messages.warning(request, "Please login first")
+            return redirect('home')
+        else:
+            model = Person
+            object_list = Person.objects.all()
+            context = {'person_list' : object_list}
+            return render(request, 'users/members_only.html', context)
     #queryset = Person.objects.all()
     #def get(self, request, *args, **kwargs):
      #   return self.render_to_response({})
