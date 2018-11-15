@@ -59,14 +59,9 @@ for i in FoodComment.objects.all():
     print(i)
 
 
-username = "admin1"
-password = "admin1"
+username = "admin"
+password = "admin"
 email = "admin@326.edu"
-adminuser = Person.objects.create_user(username=username, password=password)
-adminuser.save()
-adminuser.is_superuser = True
-adminuser.is_staff = True
-adminuser.save()
 message = f"""
 ====================================================================
 The database has been setup with the following credentials:
