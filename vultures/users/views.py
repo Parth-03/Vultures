@@ -8,7 +8,7 @@ from django.views.generic import TemplateView, View, ListView, DetailView
 
 from .forms import CustomUserCreationForm
 
-from users.models import Person, FoodPost, FoodComment
+from users.models import Person, FoodPost, FoodComment, Map
 
 
 
@@ -99,3 +99,7 @@ class CommentListView(ListView):
 class CommentDetailView(DetailView):
     template_name = 'users/comment_details.html'
     model = FoodComment
+
+class MapView(ListView):
+    template_name = 'users/map.html'
+    model = Map

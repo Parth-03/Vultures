@@ -67,4 +67,15 @@ class FoodPost(models.Model):
 	def get_absolute_url(self):
 		return reverse("post-detail", args=[str(self.id)])
 
+class Map(models.Model):
+
+	location = models.CharField(
+		max_length=1000, help_text="Enter coords for the food"
+	)
+
+	postUser = models.ForeignKey("Person", on_delete=models.SET_NULL, null=True
+	)
+
+	commentPost = models.ForeignKey("FoodPost", on_delete=models.SET_NULL, null=True)
+
 

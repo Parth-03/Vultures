@@ -20,6 +20,12 @@ urlpatterns = [
     ),
 
     url(
+        regex=r'^map/$',
+        view=views.MapView.as_view(),
+        name='map'
+    ),
+
+    url(
         regex=r'^members/$',
         view=views.MembersView.as_view(),
         name='members'
