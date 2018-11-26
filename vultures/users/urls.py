@@ -50,4 +50,16 @@ urlpatterns = [
         view=views.CommentDetailView.as_view(),
         name='comment-detail'
     ),
+    url(regex=r'feed/create/', 
+        view=views.CreatePost.as_view(), 
+        name='post_create'
+    ),
+    url(regex=r'^feed/(?P<pk>\d+)/update', 
+        view=views.UpdatePost.as_view(), 
+        name='post_update'
+    ),
+    url(regex=r'^feed/(?P<pk>\d+)/delete', 
+        view=views.DeletePost.as_view(), 
+        name='post_delete'
+    ),
 ]

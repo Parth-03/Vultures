@@ -3,13 +3,12 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import redirect, render
-
 from django.views.generic import TemplateView, View, ListView, DetailView
-
 from .forms import CustomUserCreationForm
-
 from users.models import Person, FoodPost, FoodComment
 
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 
 class LoginView(TemplateView, View):
@@ -99,3 +98,15 @@ class CommentListView(ListView):
 class CommentDetailView(DetailView):
     template_name = 'users/comment_details.html'
     model = FoodComment
+
+class CreatePost(CreateView):
+    model = FoodPost
+    fields = '__all__'
+    
+class UpdatePost(UpdateView):
+    model = FoodPost
+    fields = ['location', 'postDate', 'postInfo']
+
+class DeletePost(DeleteView):
+    model = FoodPost
+    success_url = reverse_lazy('feed')
