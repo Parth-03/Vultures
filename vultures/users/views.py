@@ -5,7 +5,8 @@ from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView, View, ListView, DetailView
 from .forms import CustomUserCreationForm
-from users.models import Person, FoodPost, FoodComment
+
+from users.models import Person, FoodPost, FoodComment, Map
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -110,3 +111,7 @@ class UpdatePost(UpdateView):
 class DeletePost(DeleteView):
     model = FoodPost
     success_url = reverse_lazy('feed')
+    
+class MapView(ListView):
+    template_name = 'users/map.html'
+    model = Map
