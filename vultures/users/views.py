@@ -102,7 +102,7 @@ class CommentDetailView(DetailView):
 
 class CreatePost(CreateView):
     model = FoodPost
-    fields = '__all__'
+    fields = ['location', 'postUser', 'postDate', 'postInfo']
     
 class UpdatePost(UpdateView):
     model = FoodPost
