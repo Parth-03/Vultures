@@ -43,7 +43,7 @@ class FoodComment(models.Model):
 
 class FoodPost(models.Model):
 
-	postScore = models.IntegerField()
+	postScore = models.IntegerField(default=0)
 
 	location = models.CharField(
 		max_length=1000, help_text="Enter coords for the food"

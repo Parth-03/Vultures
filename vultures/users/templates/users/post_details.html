@@ -7,7 +7,9 @@
   <p><strong>Info:</strong> {{ foodpost.postInfo }}</p> 
   <p><strong>Score:</strong> {{ foodpost.postScore }}</p>  
 
+  {% if user == foodpost.postUser %}
   <a class="btn btn-danger" href="./delete">Delete</a>
   <a class="btn btn-link" href="./update">Edit</a>
+  {% endif %}
 
 {% endblock %}
