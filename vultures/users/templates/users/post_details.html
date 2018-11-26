@@ -5,7 +5,10 @@
 
   <p><strong>Time:</strong>{{ foodpost.postDate }}</a></p> <!-- author detail link not yet defined -->
   <p><strong>Location:</strong> {{ foodpost.location }}</p>
-  <p><strong>Info</strong> {{ foodpost.postInfo }}</p> 
+  <p><strong>Info:</strong> {{ foodpost.postInfo }}</p> 
   <p><strong>Score:</strong> {{ foodpost.postScore }}</p>  
+
+  <a class="btn btn-danger" href="./delete">Delete</a>
+  <a class="btn btn-link" href="./update">Edit</a>
 
 {% endblock %}
