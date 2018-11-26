@@ -102,7 +102,12 @@ class CommentDetailView(DetailView):
 
 class CreatePost(CreateView):
     model = FoodPost
-    fields = ['location', 'postUser', 'postDate', 'postInfo']
+    fields = ['location', 'postDate', 'postInfo']
+
+    def form_valid(self, form):
+        if self.request.user.is_authenticated():
+            form.instance.postUser = self.request.user
+        return super(CreatePost, self).form_valid(form)
     
 class UpdatePost(UpdateView):
     model = FoodPost

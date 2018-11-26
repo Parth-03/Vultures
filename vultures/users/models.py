@@ -45,18 +45,13 @@ class FoodPost(models.Model):
 
 	postScore = models.IntegerField(default=0)
 
-	location = models.CharField(
-		max_length=1000, help_text="Enter coords for the food"
-	)
+	location = models.CharField(max_length=1000)
 
-	postUser = models.ForeignKey("Person", on_delete=models.SET_NULL, null=True
-		)
+	postUser = models.ForeignKey("Person", on_delete=models.SET_NULL, null=True)
 
 	postDate = models.DateTimeField(null=True, blank=True)
 
-	postInfo = models.CharField(
-		max_length=1000, help_text="Enter info about the food",default="Food is here"
-	)
+	postInfo = models.CharField(max_length=1000)
 
 	class Meta:
 		ordering = ["postDate"]
