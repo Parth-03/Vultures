@@ -3,7 +3,10 @@
     {% if user.is_authenticated %}
         <div class="jumbotron">
             <div class="container">
+                <!-- {% load static %}
+                <img src="{% static './_items/vulture_image.png' %}" alt="Umass diagram" style="width:555px;height:540px;"> -->
                 <h1 class="display-3">UMass Vultures</h1>
+                <h2><b>Welcome {{request.user.username}}!</b></h2>
                 <p>Welcome to UMass Vultures! Feel free to make a post for your free or reduced food option. Also check out the our feed and map 
                     for eating options. </p>
                 <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
