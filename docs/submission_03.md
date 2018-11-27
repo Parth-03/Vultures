@@ -22,11 +22,18 @@ Lastly, we have a login/logout functionality. Logged out users will still be abl
 
 
 # Design Overview
-For the login/logout functionality of our project, if a user is not logged into an account, they will be given an option of registering to create an account. This 'Register' page is a form that when filled out will give the user the privileges of a logged in user as well as add the new use to the site database. We also have a 'Members View' page where users can go down the list of users and see the specific posts, comments, and score of that user. This is useful for if someone has a preferred user or has had god experiences with the food options a certain user has given before. The 'Member's View' page is only available to logged in users; if a logged out user tries to access this page, they will be prompted to "Please login first".
+For the login/logout functionality of our project, if a user is not logged into an account, they will be given an option of registering to create an account. This 'Register' page is a form that when filled out will give the user the privileges of a logged in user as well as add the new user to the site database. We also have a 'Members View' page where users can go down the list of users and see the specific posts, comments, and score of that user. This is useful for if someone has a preferred user or has had god experiences with the food options a certain user has given before. The 'Member's View' page is only available to logged in users; if a logged out user tries to access this page, they will be prompted to "Please login first".
 #
-For ease of logging in, we simply made the log in form part of our navbar so users will not have to navigate to a new page and can seamlessly log in. New data in the form of food posts can be added by going to the 'Post' tab, filling out the form and then the post will appear on the 'Feed' tab where users can upvote/downvote posts and make comments.
+For ease of logging in, we simply made the log in form part of our Navbar so users will not have to navigate to a new page and can seamlessly log in. New data in the form of food posts can be added by going to the 'Post' tab, filling out the form and then the post will appear on the 'Feed' tab where users can upvote/downvote posts and make comments.
 
 # Problems/Successes
+For successes, we were able to implement the login/logout functionality pretty seamlessly in our Navbar. Also, creating different views for a logged in user and logged out user was pretty easy and allowed for better control over what privileges users of the app have. 
 
+As for problems for this project, getting the forms and feed to work was a challenge. Parsing the form and adding that data to our database was something that was an issue for a little bit but We were able to figure it out. We also struggled with the group portion of the project and figuring out how to differentiate from users and groups.
 
 # Team Choice
+For our final submission, we will work on the functionality for the map portion of our project. This will mean taking all the post in the feed and making them visible on an interactive map of the UMass campus. 
+#
+We will also work on different visual aspect of our app including color schemes, more extensive profile pages, and adding more details to our forms so we can have more descriptive posts.
+#
+Lastly, we will implement a working comment form to give users an opportunity to give feedback on a post.
