@@ -18,7 +18,7 @@ Lastly, we have a login/logout functionality. Logged out users will still be abl
 * Thomas Bui, Github thomasbui1997
 
 # Video Link
-(Video Link)
+https://youtu.be/70oaokJIBHQ
 
 
 # Design Overview
