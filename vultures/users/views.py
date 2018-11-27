@@ -4,7 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView, View, ListView, DetailView
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm, CreateForm
 
 from users.models import Person, FoodPost, FoodComment, Map
 
@@ -102,7 +102,8 @@ class CommentDetailView(DetailView):
 
 class CreatePost(CreateView):
     model = FoodPost
-    fields = ['location', 'postDate', 'postInfo']
+    # fields = ['location', 'postDate', 'postInfo']
+    form_class = CreateForm
 
     def form_valid(self, form):
         if self.request.user.is_authenticated():
