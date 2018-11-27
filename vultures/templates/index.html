@@ -1,36 +1,61 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a
-                jumbotron and three supporting pieces of content. Use it as a starting point to create something more
-                unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    {% if user.is_authenticated %}
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">UMass Vultures</h1>
+                <p>Welcome to UMass Vultures! Feel free to make a post for your free or reduced food option. Also check out the our feed and map 
+                    for eating options. </p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
         </div>
-    </div>
 
-    <!-- Example row of columns -->
-    <div class="row">
-    <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-            Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-            Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-            felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-            massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-    </div>
+        <!-- Example row of columns -->
+        <div class="row">
+        <div class="col-md-4">
+            <h2>Free/Reduced Food</h2>
+            <p>Our goal for this site is to give students and faculty at UMass a way to get free or reduced priced food. Oftentimes, 
+                much of this food goes to waste so we set out to make it to reduce this waste and give members of the UMass community another way
+                to enjoy the food options UMass has to offer! </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Feed</h2>
+            <p>Check here for a running feed of options for food! </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Map</h2>
+            <p>Google map representation of where there are food options. Find an oportunity for food that is close to you!</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+    {% else %}
+    <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">UMass Vultures</h1>
+                <p>Welcome to UMass Vultures! Check out the our feed and map for eating options. If you have an account and want to make a post, please log in. </p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
+        </div>
+
+         <!-- Example row of columns -->
+         <div class="row">
+                <div class="col-md-4">
+                    <h2>Free/Reduced Food</h2>
+                    <p>Our goal for this site is to give students and faculty at UMass a way to get free or reduced priced food. Oftentimes, 
+                        much of this food goes to waste so we set out to make it to reduce this waste and give members of the UMass community another way
+                        to enjoy the food options UMass has to offer! </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Feed</h2>
+                    <p>Check here for a running feed of options for food! </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Map</h2>
+                    <p>Google map representation of where there are food options. Find an oportunity for food that is close to you!</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div>
+    {% endif %}
 {% endblock %}
