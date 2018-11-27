@@ -26,21 +26,14 @@ For the login/logout functionality of our project, if a user is not logged into 
 #
 For ease of logging in, we simply made the log in form part of our Navbar so users will not have to navigate to a new page and can seamlessly log in. New data in the form of food posts can be added by going to the 'Post' tab, filling out the form and then the post will appear on the 'Feed' tab where users can upvote/downvote posts and make comments.
 
-Users can now create new posts on the 'Post' page. They must provide the time, location, and description of relevant events. If the original poster is logged in when they create the post, their username will be displayed on the post. These posts are added to the feed. 
-
-On the feed, each post has a 'Poster' field which displays the author of the post. If the author was not logged in when they made the post, this field will be set to 'None'. The time, location, and description will be shown as the author provided. The score will initially have a default value of 0. Users will only be able to modify and delete posts when they are logged in and viewing their own posts. 
-
 # Problems/Successes
-For successes, we were able to implement the login/logout functionality pretty seamlessly in our Navbar. Also, creating different views for a logged in user and logged out user was pretty easy and allowed for better control over what privileges users of the app have. 
+For successes, we were able to implement the login/logout functionality pretty seamlessly in our Navbar. Also, creating different views for a logged in user and logged out user was pretty easy and allowed for better control over what privileges users of the app have. Also we were pretty ahead on this project as we implemented login/logout pretty far in advance so the only major hurdle we had for this project was getting the forms working correctly.
 
-As for problems for this project, getting the forms and feed to work was a challenge. Parsing the form and adding that data to our database was something that was an issue for a little bit but We were able to figure it out. We also struggled with the group portion of the project and figuring out how to differentiate from users and groups.
+As for problems for this project, getting the forms and feed to work was a challenge. Parsing the form and adding that data to our database was something that was an issue for a little bit but we were able to figure it out. We also struggled with the group portion of the project and figuring out how to differentiate from users and groups.
 
 # Team Choice
-<<<<<<< HEAD
 For our final submission, we will work on the functionality for the map portion of our project. This will mean taking all the post in the feed and making them visible on an interactive map of the UMass campus. 
 #
 We will also work on different visual aspect of our app including color schemes, more extensive profile pages, and adding more details to our forms so we can have more descriptive posts.
 #
 Lastly, we will implement a working comment form to give users an opportunity to give feedback on a post.
-=======
->>>>>>> ccb1c44fa277f4de3108e7815a574c0f5ef41cf1
