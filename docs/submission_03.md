@@ -26,6 +26,10 @@ For the login/logout functionality of our project, if a user is not logged into 
 #
 For ease of logging in, we simply made the log in form part of our navbar so users will not have to navigate to a new page and can seamlessly log in. New data in the form of food posts can be added by going to the 'Post' tab, filling out the form and then the post will appear on the 'Feed' tab where users can upvote/downvote posts and make comments.
 
+Users can now create new posts on the 'Post' page. They must provide the time, location, and description of relevant events. If the original poster is logged in when they create the post, their username will be displayed on the post. These posts are added to the feed. 
+
+On the feed, each post has a 'Poster' field which displays the author of the post. If the author was not logged in when they made the post, this field will be set to 'None'. The time, location, and description will be shown as the author provided. The score will initially have a default value of 0. Users will only be able to modify and delete posts when they are logged in and viewing their own posts. 
+
 # Problems/Successes
 
 
