@@ -42,10 +42,25 @@ class FoodComment(models.Model):
 
 
 class FoodPost(models.Model):
+	BUILDING_CHOICES = (
+    	('library','W.E.B. Du Bois Library'),
+    	('hamp', 'Hampshire Dining Hall'),
+    	('berk','Berkshire Dining Hall'),
+    	('woo','Worcester Dining Hall'),
+    	('frank','Franklin Dining Hall'),
+		('l','Lederle Tower'),
+		('Sc','South College'),
+		('rec','Campus Rec Center'),
+		('cs','Computer Science Building'),
+		('Thom','Thompson'),
+		('mor','Morrill 3'),
+	)
+
+	roomNum = models.CharField(max_length = 10)
 
 	postScore = models.IntegerField(default=0)
 
-	location = models.CharField(max_length=100)
+	location = models.CharField(max_length=100, choices = BUILDING_CHOICES)
 
 	postUser = models.ForeignKey("Person", on_delete=models.SET_NULL, null=True)
 

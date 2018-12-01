@@ -14,7 +14,7 @@ class DateTimeInput(forms.DateTimeInput):
 class CreateForm(forms.ModelForm):
     class Meta:
         model = FoodPost
-        fields = ['location', 'postDate', 'postInfo']
+        fields = ['location', 'roomNum', 'postDate', 'postInfo']
         widgets = {
             'postDate': DateTimeInput(),
         }
