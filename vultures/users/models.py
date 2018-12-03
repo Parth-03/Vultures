@@ -56,7 +56,7 @@ class FoodPost(models.Model):
 		('mor','Morrill 3'),
 	)
 
-	roomNum = models.CharField(max_length = 10)
+	roomNum = models.IntegerField(default = 0)
 
 	postScore = models.IntegerField(default=0)
 

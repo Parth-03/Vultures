@@ -9,7 +9,7 @@
                 <h2><b>Welcome {{request.user.username}}!</b></h2>
                 <p>Welcome to UMass Vultures! Feel free to make a post for your free or reduced food option. Also check out the our feed and map 
                     for eating options. </p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+                <p><a class="btn btn-primary btn-lg" href="https://github.com/Ab-hay/s_sasquatch5" target="_blank" role="button">Learn more &raquo;</a></p>
             </div>
         </div>
 
@@ -20,24 +20,24 @@
             <p>Our goal for this site is to give students and faculty at UMass a way to get free or reduced priced food. Oftentimes, 
                 much of this food goes to waste so we set out to make it to reduce this waste and give members of the UMass community another way
                 to enjoy the food options UMass has to offer! </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="{% url 'feed' %}" role="button">Make A Post! &raquo;</a></p>
         </div>
         <div class="col-md-4">
             <h2>Feed</h2>
             <p>Check here for a running feed of options for food! </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="{% url 'post_create' %}" role="button">View Feed &raquo;</a></p>
         </div>
         <div class="col-md-4">
             <h2>Map</h2>
             <p>Google map representation of where there are food options. Find an oportunity for food that is close to you!</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="{% url 'map' %}" role="button">View Map &raquo;</a></p>
         </div>
     {% else %}
     <div class="jumbotron">
             <div class="container">
                 <h1 class="display-3">UMass Vultures</h1>
                 <p>Welcome to UMass Vultures! Check out the our feed and map for eating options. If you have an account and want to make a post, please log in. </p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+                <p><a class="btn btn-primary btn-lg" href="https://github.com/Ab-hay/s_sasquatch5" role="button">Learn more &raquo;</a></p>
             </div>
         </div>
 
@@ -48,17 +48,17 @@
                     <p>Our goal for this site is to give students and faculty at UMass a way to get free or reduced priced food. Oftentimes, 
                         much of this food goes to waste so we set out to make it to reduce this waste and give members of the UMass community another way
                         to enjoy the food options UMass has to offer! </p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="{% url 'feed' %}" role="button">Make A Post! &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
                     <h2>Feed</h2>
                     <p>Check here for a running feed of options for food! </p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="{% url 'post_create' %}" role="button">View Feed &raquo;</a></p>
                 </div>
                 <div class="col-md-4">
                     <h2>Map</h2>
                     <p>Google map representation of where there are food options. Find an oportunity for food that is close to you!</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="{% url 'map' %}" role="button">View Map &raquo;</a></p>
                 </div>
     {% endif %}
 {% endblock %}
