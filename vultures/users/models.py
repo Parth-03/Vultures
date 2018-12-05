@@ -56,17 +56,17 @@ class FoodPost(models.Model):
 		('mor','Morrill 3'),
 	)
 
-	roomNum = models.IntegerField(default = 0)
+	roomNum = models.IntegerField("Room Number", default = 0)
 
-	postScore = models.IntegerField(default=0)
+	postScore = models.IntegerField("Score", default=0)
 
-	location = models.CharField(max_length=100, choices = BUILDING_CHOICES)
+	location = models.CharField("Location", max_length=100, choices = BUILDING_CHOICES)
 
 	postUser = models.ForeignKey("Person", on_delete=models.SET_NULL, null=True)
 
-	postDate = models.DateTimeField(null=True, blank=True)
+	postDate = models.DateTimeField("Date", null=True, blank=True)
 
-	postInfo = models.TextField(max_length=1000)
+	postInfo = models.TextField("Description", max_length=1000)
 
 	class Meta:
 		ordering = ["postDate"]
