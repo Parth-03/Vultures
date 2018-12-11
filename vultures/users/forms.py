@@ -12,6 +12,7 @@ class DateTimeInput(forms.DateTimeInput):
     input_type = 'date'
 
 class CreateForm(forms.ModelForm):
+    # foodPic = forms.ImageField(required = False)
     class Meta:
         model = FoodPost
         fields = ['location','foodType', 'roomNum', 'postDate', 'postInfo']

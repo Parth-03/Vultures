@@ -3,14 +3,14 @@ from django.db import models
 from django.core.urlresolvers import reverse
 
 class Person(AbstractUser):
-    description = models.TextField(blank=True)
+	description = models.TextField(blank=True)
 
-    def __str__(self):
-        return self.username
+	def __str__(self):
+		return self.username
 
-    def get_absolute_url(self):
-        """Returns the url to access a particular author instance."""
-        return reverse("user-detail", args=[str(self.id)])
+	def get_absolute_url(self):
+		"""Returns the url to access a particular author instance."""
+		return reverse("user-detail", args=[str(self.id)])
 
 
 class FoodComment(models.Model):
@@ -42,17 +42,17 @@ class FoodComment(models.Model):
 
 class FoodPost(models.Model):
 	BUILDING_CHOICES = (
-    	('library','W.E.B. Du Bois Library'),
-    	('hamp', 'Hampshire Dining Hall'),
-    	('berk','Berkshire Dining Hall'),
-    	('woo','Worcester Dining Hall'),
-    	('frank','Franklin Dining Hall'),
-		('l','Lederle Tower'),
-		('Sc','South College'),
-		('rec','Campus Rec Center'),
-		('cs','Computer Science Building'),
-		('Thom','Thompson'),
-		('mor','Morrill 3'),
+    	('W.E.B. Du Bois Library','W.E.B. Du Bois Library'),
+    	('Hampshire Dining Hall', 'Hampshire Dining Hall'),
+    	('Berkshire Dining Hall','Berkshire Dining Hall'),
+    	('Worcester Dining Hall','Worcester Dining Hall'),
+    	('Franklin Dining Hall','Franklin Dining Hall'),
+		('Lederle Tower','Lederle Tower'),
+		('South College','South College'),
+		('Campus Rec Center','Campus Rec Center'),
+		('Computer Science Building','Computer Science Building'),
+		('Thompson','Thompson'),
+		('Morrill 3','Morrill 3'),
 	)
 
 	roomNum = models.IntegerField("Room Number", default = 0)
@@ -68,6 +68,8 @@ class FoodPost(models.Model):
 	postInfo = models.TextField("Description", max_length= 1000)
 
 	foodType = models.CharField("Food", max_length = 40)
+
+	# foodPic = models.ImageField("Picture",upload_to = 'docs/imgs', null = True, blank = True)
 
 	class Meta:
 		ordering = ["postDate"]

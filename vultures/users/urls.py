@@ -31,7 +31,12 @@ urlpatterns = [
         name='members'
     ),
 
-     url(
+    url(regex=r'^members/(?P<pk>\d+)/$',
+        view=views.ProfileDetailView.as_view(),
+        name='user-detail'
+    ),
+
+    url(
        regex=r'^post/$',
        view=views.PostView.as_view(),
        name='post'

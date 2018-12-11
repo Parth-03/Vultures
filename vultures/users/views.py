@@ -80,6 +80,9 @@ class MembersView(ListView):
     #def get(self, request, *args, **kwargs):
      #   return self.render_to_response({})
 
+class ProfileDetailView(DetailView):
+    template_name = 'users/profile.html'
+    model = Person
 
 class PostView(TemplateView):
     template_name = 'users/post.html'
