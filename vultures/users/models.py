@@ -66,7 +66,9 @@ class FoodPost(models.Model):
 
 	postDate = models.DateTimeField("Date", null=True, blank=True)
 
-	postInfo = models.TextField("Description", max_length=1000)
+	postInfo = models.TextField("Description", max_length= 1000)
+
+	foodType = models.CharField("Food", max_length = 40)
 
 	class Meta:
 		ordering = ["postDate"]

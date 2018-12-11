@@ -25,11 +25,13 @@ for i in range(1, 10):
 # Create Food Posts
 for i in range(1,100):
     a_score= fake.random_int(0, 50)
+    a_room= fake.random_int(1,999)
     a_location= fake.address()
     a_date= fake.date()
     a_info= fake.sentence()
+    a_food= fake.sentence()
     a_user = random.choice(persons)
-    post= FoodPost(postScore= a_score, location= a_location, postUser= a_user, postDate= a_date, postInfo=  a_info)
+    post= FoodPost(postScore= a_score, location= a_location, postUser= a_user, postDate= a_date, postInfo=  a_info, foodType = a_food, roomNum = a_room)
     post.save()
     posts.append(post)
 
