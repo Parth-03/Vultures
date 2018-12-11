@@ -7,9 +7,9 @@
 {% if object_list %}
 <ul>
   {% for FoodPost in object_list %}
-  <li>
-    <a class = "spacing" href="{{ FoodPost.get_absolute_url }}">{{ FoodPost.postInfo }} ({{ FoodPost.postScore }})</a>
-    <!-- #<p>{{ FoodPost.</p> -->
+  <li class = "list">
+    <a href="{{ FoodPost.get_absolute_url }}">{{ FoodPost.foodType }}                     ({{ FoodPost.postScore }})</a>
+    <p style = "padding-right: 5px; padding-left: 5px;">{{ FoodPost.postInfo }} </p>
   </li>
   {% endfor %}
 </ul>

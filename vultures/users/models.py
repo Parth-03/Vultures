@@ -2,7 +2,6 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.core.urlresolvers import reverse
 
-
 class Person(AbstractUser):
     description = models.TextField(blank=True)
 
@@ -57,7 +56,7 @@ class FoodPost(models.Model):
 	)
 
 	roomNum = models.IntegerField("Room Number", default = 0)
-
+	
 	postScore = models.IntegerField("Score", default=0)
 
 	location = models.CharField("Location", max_length=100, choices = BUILDING_CHOICES)
