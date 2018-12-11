@@ -1,3 +1,13 @@
 body {
-    background-color: red;
+    background-color: maroon;
+}
+
+.jumbotron {
+    background-color: silver;
+}
+
+.col-md-4 {
+    color: black;
+    background-color: silver;
+    padding-right: 10px;
 }

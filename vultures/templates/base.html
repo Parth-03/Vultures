@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" type="image/png" href="http://www.simpleimageresizer.com/_uploads/photos/1179c2fe/vultureicon_32x32.png"/>
+    <link rel="shortcut icon" type="image/png" href="vulturefav.png"/>
+    <head><link rel = "stylesheet" type = "text/css" href= "{% static 'css/home.css' %}"> </head>
 
     <title>{% block title %}UMass Vultures{% endblock %}</title>
 
