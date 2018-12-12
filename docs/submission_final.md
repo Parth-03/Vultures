@@ -47,6 +47,7 @@ Delete Confirmation - Layer of security so user doesn't accidently delete their 
 
 # Data Model
 
+
 # URL Routes/Mappings
 | URL | Description |
 | --- | --- |
@@ -70,4 +71,6 @@ Once logged in, they will have permission to go to the 'Members View' page, whic
 
 # Team Choice
 
+
 # Conclusion
+One of the challenges we faced early on in the development process was transitioning from working with React to working in Django. As a team, we spent alot of time learning different aspects of the framework, as well as getting certain components to work. However, we persisted and found that Django abstracted many aspects of the development process, such as building the database and handling views, which helped accelerated the project's completion.
