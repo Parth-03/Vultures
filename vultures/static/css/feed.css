@@ -16,6 +16,14 @@ h1{
     padding-bottom: 50px;
 }
 
+.up{
+    text-align: right;
+}
+
+.down{
+    text-align: right;
+}
+
 ul{
     list-style-type: none;
 }

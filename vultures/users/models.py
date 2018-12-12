@@ -5,6 +5,8 @@ from django.core.urlresolvers import reverse
 class Person(AbstractUser):
 	description = models.TextField(blank=True)
 
+	userScore = models.IntegerField(default = 0)
+
 	def __str__(self):
 		return self.username
 
@@ -69,10 +71,12 @@ class FoodPost(models.Model):
 
 	foodType = models.CharField("Food", max_length = 40)
 
+	# comment = models.ForeignKey("FoodComment", max_length = 500)
+
 	# foodPic = models.ImageField("Picture",upload_to = 'docs/imgs', null = True, blank = True)
 
 	class Meta:
-		ordering = ["postDate"]
+		ordering = ["postScore"]
 
 	def __str__(self):
 		return self.postInfo

@@ -36,6 +36,10 @@ urlpatterns = [
         name='user-detail'
     ),
 
+    # url(r'^upvote/(?P<photo_id>[0-9]+)/$', 
+    #     views.upvote, 
+    #     name='upvote'),
+
     url(
        regex=r'^post/$',
        view=views.PostView.as_view(),

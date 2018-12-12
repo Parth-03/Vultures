@@ -16,8 +16,8 @@ fake = Faker()
 for i in range(1, 10):
     a_name = fake.name()
     a_password = fake.name()
-   # a_score= fake.random_int(0, 100)
-    person = Person.objects.create_user(username= a_name, password=a_password)
+    a_userscore= fake.random_int(0, 100)
+    person = Person.objects.create_user(username= a_name, password=a_password, userScore= a_userscore)
     person.save()
     persons.append(person)
 

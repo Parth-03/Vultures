@@ -115,7 +115,7 @@ class CreatePost(CreateView):
     
 class UpdatePost(UpdateView):
     model = FoodPost
-    fields = ['location', 'postDate', 'postInfo']
+    fields = ['location','foodType', 'roomNum', 'postDate', 'postInfo']
 
 class DeletePost(DeleteView):
     model = FoodPost

@@ -2,6 +2,7 @@
 
 {% block content %} 
     <p><strong>{{ person.username }} </strong></p>
+    <p><strong>Score:</strong> {{ person.userScore }}</p>
     <div>
         {% for post in posts %}
             Post: {{ post.content }}

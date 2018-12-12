@@ -10,6 +10,8 @@
   <li class = "list">
     <a href="{{ FoodPost.get_absolute_url }}">{{ FoodPost.foodType }}                     ({{ FoodPost.postScore }})</a>
     <p style = "padding-right: 5px; padding-left: 5px;">{{ FoodPost.postInfo }} </p>
+    <button class = "up">Upvote</button>
+    <button class = "down">Downvote</button>
   </li>
   {% endfor %}
 </ul>
