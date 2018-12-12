@@ -76,7 +76,7 @@ class FoodPost(models.Model):
 	# foodPic = models.ImageField("Picture",upload_to = 'docs/imgs', null = True, blank = True)
 
 	class Meta:
-		ordering = ["postScore"]
+		ordering = ["-postScore"]
 
 	def __str__(self):
 		return self.postInfo
