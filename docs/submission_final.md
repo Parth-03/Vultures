@@ -42,11 +42,13 @@ Post Form - Allows a user to create a new post by inputting the information into
 Post Detail (when viewed by original poster) - Similar to the other post detail but also includes buttons to edit/delete the post.  
 
 ![](https://i.gyazo.com/eb4894f5e6e0650db9694bbcb5ac21af.png)
-Delete Confirmation - Layer of security so user doesn't accidently delete their post.  
+Delete Confirmation - Layer of security so user doesn't accidentally delete their post.  
 
 
 # Data Model
+![](https://i.imgur.com/ax053y0.jpg)
 
+Our data model diagram did not change from our previous submission. We have a FoodPost with a score field, location, user, time, and info this all maps to a single user (Person) that makes the post. The Person relation to FoodPost is 1 to many since a user can make as many posts as they please. Their individual score will be a reflection of their aggregate scores on all of their food posts. We also have a FoodComment that maps 1 to 1 with a post but post to comment is 1 to many since a post can have many comments. Comments will have the fields of Person (1 to 1, since only 1 person can be connected to a comments; person to comment is 1 to many since a user can make as many comments as they want), the comment post/content, comment score, and time of comment.
 
 # URL Routes/Mappings
 | URL | Description |
@@ -71,10 +73,14 @@ Once logged in, they will have permission to go to the 'Members View' page, whic
 
 # Team Choice
 For the team choice portion we decided to implement a profile page that shows a user's name as well as their cumulative score from food posts. We also implemented a way to view comments that show a post, the commenter, the comment content, the data, and the comment score:
+
 ![](https://i.imgur.com/5Yb4p7w.jpg) 
 
 We also made our food post form more expansive with additional fields for room number, a drop down menu of UMass buildings, and a food type field:
+
 ![](https://i.imgur.com/RMSCqUa.jpg)
+
+Finally, we added some CSS styling to our home page an feed to give a more attractive view of our site.
 
 # Conclusion
 One of the challenges we faced early on in the development process was transitioning from working with React to working in Django. As a team, we spent a lot of time learning different aspects of the framework, as well as getting certain components to work. One example was getting Faker to populate the database with randomly created information, which was difficult because we had different machines. However, we persisted and found that Django abstracted many aspects of the development process, such as building the database and handling views, which helped accelerated the project's completion. Looking back, it would have been useful to have worked on the project in Django from the very beginning, had we known that this was a requirement for our project.
