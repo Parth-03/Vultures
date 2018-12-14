@@ -3,18 +3,39 @@
 
 {% block content %}
 <head><link rel = "stylesheet" type = "text/css" href= "{% static 'css/feed.css' %}"> </head>
-<h1>Post List</h1>
+<h1>Current Feed</h1>
 {% if object_list %}
-<ul>
+<div class="container">
+  <ul>
   {% for FoodPost in object_list %}
-  <li class = "list">
-    <a href="{{ FoodPost.get_absolute_url }}">{{ FoodPost.foodType }}                     ({{ FoodPost.postScore }})</a>
-    <p style = "padding-right: 5px; padding-left: 5px;">{{ FoodPost.postInfo }} </p>
-    <button class = "up">Upvote</button>
-    <button class = "down">Downvote</button>
+  <li class = "rcorners ">
+    <br>
+    <div class='container'>
+    <div class="row">
+    <div class="col-4">
+        <h4><strong>Food Type: <a href="{{ FoodPost.get_absolute_url }}">{{ FoodPost.foodType }}</a></strong></h4><br>
+        <h5><strong> Score: {{ FoodPost.postScore }}</strong></h5><br>
+        <h5><strong>Info: {{ FoodPost.postInfo }} </strong></h5><br>
+        <br>
+        <button class = "btn btn-success up">Upvote</button>
+        <button class = "btn btn-warning down">Downvote</button>
+    </div>
+    <div class="col-6">
+        <h4><strong> Location: {{ FoodPost.location}}</strong></h4><br>
+        <h5><strong> Time posted: {{ FoodPost.postDate }}</strong></h5><br>
+    </div>
+    <div class="col-2">
+      <div class="right"><p class="up"><h3>{{ FoodPost.postUser }}</h3></p></div><br>
+      <div class="user one">
+      </div><br>    
+    </div>
+    </div>
+    
+    </div>
   </li>
   {% endfor %}
 </ul>
+</div>
 {% else %}
 <p>There are no posts.</p>
 {% endif %}       
